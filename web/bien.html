@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda</title>
+    <title>Bienvenida</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
+</head> 
 <body >
 <!-- estructura barra de navegacion-->
 
-    <nav class="nav-services">
+    <nav  class="nav-services">
         <div class="container-setup">
-            <a class="btn-main" href="html/ajustes.html">Ajustes</a>
+            <a class="btn-main" href="ajustes.html">Ajustes</a>
             <img class="setup"    src="icon/ajustes.png" alt="img.png">
         </div>
         <div class="menu">
             <ul class="main-menu menu">
-                <li><a href="">Cerrar Sesion</a></li>   
+                <li><a href="CerrarSesionServlet">Cerrar Sesion</a></li>   
             </ul>
         </div>
         <div class="container-account">
@@ -37,7 +37,7 @@
             <!--icono menu-->
             <div class="menu-main">
                 <img src="icon/menu.png" alt="Icono de menú"  id="menu-icon">
-                <a id="menu_main" href="">Menu</a>
+                <a id="menu_icon" href="">Menu</a>
             </div>
             <!--lista de iconos-->
             <ul id="menu-items">
@@ -71,36 +71,63 @@
             
              <div class="container-categorias">
                     <img class="icono-menu" src="icon/help.png" alt="icono">
-                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
              </div>
             
             </ul>
           </div>
+          <!--contenedor principal -->
+        <div class="container-form-services">     
 
-         
-            
-            <!--contenedor imagenes ayuda-->
-            <div class="container-help">
-                <h3>Ayuda</h3>
-                <div class="con-img-help">
-                    <div class="img-help">
-                        <img src="img/support.png" alt="">
-                        <a href="">Soporte</a>
-                    </div>
-                    <div class="img-help">
-                        <img src="img/manual.png" alt="">
-                        <a href="">Manual usuario</a>
-                    </div>
-                    <div class="img-help">
-                        <img src="img/problem.png" alt="">
-                        <a href="">Preguntas</a>
-                    </div>
-                </div>
+          
+  
+            <div class="container-bienvenida">
+                <h2>Bienvenido a Motosoft</h2>
+
             </div>
-        </div>  
-   
+            <div class="contenedor-mensajes-princp">
+ 
+                <div class="contenedor-noticias">
+                    <div class="noticia noti-1">
+                        <h2>Siempre utiliza aceite geniunos</h2>
+                        <img id="img-aceite"  src="img/aceite.png" alt="img-aceite">    
+                    </div>
+                    <div class="noticia noti-2">
+                        <h2>Utiliza el casco seguridad</h2>
+                        <img src="img/casco-mujer-seguridad.webp" alt="">
+                    </div>
+                    <div class="noticia noti-3">
+                        <h2>Revisa periodicamente el nivel de aceite de tu motocicleta</h2>
+                        <img src="img/nivel-motor.jpg" alt="nivel-aceite">
+                    </div>
+                    <!-- Agrega más noticias aquí -->
+                  </div>
+           
+        </div>
+    </div>
+    </div>
+   <script>
+       const contenedor = document.querySelector('.contenedor-noticias');
 
-<script src="js/motosoft.js"></script>
+    function desplazamientoAutomatico() {
+        setInterval(() => {
+         contenedor.scrollBy({
+         
+         top: 0,
+         left: contenedor.offsetWidth,
+         behavior: 'smooth'
+        });
+     }, 3000);
+    }
+
+desplazamientoAutomatico();
+
+
+
+    </script>
+    
+    <script src="js/motosoft.js"></script>
+
 </body>
 
 </html>
